@@ -1,20 +1,23 @@
-**RISC-V Pipelined Processor**
+# **RISC-V Pipelined Processor**
+______________________________________________________________________________________________________________________
 
-**Pipeline Architecture**
+## **Pipeline Architecture**
+
+
 ![Pipeline Architecture](.github/assets/Pipeline_Architechture.png)
 
 
 
 A 5-stage pipelined RISC-V processor implemented in Verilog, supporting basic instructions and hazard handling.
 
-**Features**
+## **Features**
 - Instruction Fetch, Decode, Execute, Memory, Writeback stages  
 - Hazard detection and forwarding
 - Simple and modular Verilog design
 
 This project builds upon an open-source RISC-V core by MERL-DSU (Apache 2.0 Licensed), with substantial modifications.
 
-**Author**
+## **Author**
 
 [Siddharth Sahoo](https://github.com/Siddharth-Sahoo9)  
 B.Tech, Electronics and Communication Engineering  
