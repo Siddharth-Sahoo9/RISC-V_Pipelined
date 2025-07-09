@@ -1,4 +1,5 @@
 **RISC-V Pipelined Processor**
+
 A 5-stage pipelined RISC-V processor implemented in Verilog, supporting basic instructions and hazard handling.
 
 **Features**
