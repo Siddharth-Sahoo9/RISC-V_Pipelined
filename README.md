@@ -1,7 +1,7 @@
 **RISC-V Pipelined Processor**
 
 **Pipeline Architecture**
-![Pipeline Architecture](.assets/Pipeline_Architechture.png)
+![Pipeline Architecture](.github/assets/Pipeline_Architechture.png)
 
 
 
