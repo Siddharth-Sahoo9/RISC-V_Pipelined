@@ -1,0 +1,254 @@
+$date
+	Thu Jul 03 23:51:00 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb $end
+$var wire 32 ! InstrD [31:0] $end
+$var wire 32 " PCD [31:0] $end
+$var wire 32 # PCPlus4D [31:0] $end
+$var reg 1 $ PCSrcE $end
+$var reg 32 % PCTargetE [31:0] $end
+$var reg 1 & clk $end
+$var reg 1 ' rst $end
+$scope module dut $end
+$var wire 32 ( InstrD [31:0] $end
+$var wire 32 ) InstrF [31:0] $end
+$var wire 32 * PCD [31:0] $end
+$var wire 32 + PCF [31:0] $end
+$var wire 32 , PCPlus4D [31:0] $end
+$var wire 32 - PCPlus4F [31:0] $end
+$var wire 1 . PCSrcE $end
+$var wire 32 / PCTargetE [31:0] $end
+$var wire 32 0 PC_F [31:0] $end
+$var wire 1 1 clk $end
+$var wire 1 2 rst $end
+$var reg 32 3 InstrF_reg [31:0] $end
+$var reg 32 4 PCF_reg [31:0] $end
+$var reg 32 5 PCPlus4F_reg [31:0] $end
+$scope module PC_MUX $end
+$var wire 32 6 a [31:0] $end
+$var wire 32 7 b [31:0] $end
+$var wire 32 8 c [31:0] $end
+$var wire 1 . s $end
+$upscope $end
+$scope module Program_Counter $end
+$var wire 32 9 PC_Next [31:0] $end
+$var wire 1 1 clk $end
+$var wire 1 2 rst $end
+$var reg 32 : PC [31:0] $end
+$upscope $end
+$scope module IMEM $end
+$var wire 32 ; A [31:0] $end
+$var wire 32 < RD [31:0] $end
+$var wire 1 2 rst $end
+$upscope $end
+$scope module PC_adder $end
+$var wire 32 = a [31:0] $end
+$var wire 32 > b [31:0] $end
+$var wire 32 ? c [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx ?
+b100 >
+bx =
+b0 <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+b0 5
+b0 4
+b0 3
+02
+11
+bx 0
+bx /
+x.
+bx -
+b0 ,
+bx +
+b0 *
+b0 )
+b0 (
+0'
+1&
+bx %
+x$
+b0 #
+b0 "
+b0 !
+$end
+#50
+0&
+01
+#100
+b0 :
+b100 -
+b100 6
+b100 ?
+b0 +
+b0 ;
+b0 =
+1&
+11
+#150
+0&
+01
+#200
+b10100000000001010010011 )
+b10100000000001010010011 <
+b100 0
+b100 8
+b100 9
+b0 %
+b0 /
+b0 7
+0$
+0.
+1'
+12
+1&
+11
+#250
+0&
+01
+#300
+b1100000000001100010011 )
+b1100000000001100010011 <
+b1000 0
+b1000 8
+b1000 9
+b100 :
+b1000 -
+b1000 6
+b1000 ?
+b100 +
+b100 ;
+b100 =
+b100 5
+b100 #
+b100 ,
+b10100000000001010010011 3
+b10100000000001010010011 !
+b10100000000001010010011 (
+1&
+11
+#350
+0&
+01
+#400
+b11000101000001110110011 )
+b11000101000001110110011 <
+b1100 0
+b1100 8
+b1100 9
+b1000 :
+b1100 -
+b1100 6
+b1100 ?
+b1000 +
+b1000 ;
+b1000 =
+b1000 5
+b1000 #
+b1000 ,
+b100 4
+b100 "
+b100 *
+b1100000000001100010011 3
+b1100000000001100010011 !
+b1100000000001100010011 (
+1&
+11
+#450
+0&
+01
+#500
+b10010000000011 )
+b10010000000011 <
+b10000 0
+b10000 8
+b10000 9
+b1100 :
+b10000 -
+b10000 6
+b10000 ?
+b1100 +
+b1100 ;
+b1100 =
+b1100 5
+b1100 #
+b1100 ,
+b1000 4
+b1000 "
+b1000 *
+b11000101000001110110011 3
+b11000101000001110110011 !
+b11000101000001110110011 (
+1&
+11
+#550
+0&
+01
+#600
+b100000000010010010011 )
+b100000000010010010011 <
+b10100 0
+b10100 8
+b10100 9
+b10000 :
+b10100 -
+b10100 6
+b10100 ?
+b10000 +
+b10000 ;
+b10000 =
+b10000 5
+b10000 #
+b10000 ,
+b1100 4
+b1100 "
+b1100 *
+b10010000000011 3
+b10010000000011 !
+b10010000000011 (
+1&
+11
+#650
+0&
+01
+#700
+b100101000000010100110011 )
+b100101000000010100110011 <
+b11000 0
+b11000 8
+b11000 9
+b10100 :
+b11000 -
+b11000 6
+b11000 ?
+b10100 +
+b10100 ;
+b10100 =
+b10100 5
+b10100 #
+b10100 ,
+b10000 4
+b10000 "
+b10000 *
+b100000000010010010011 3
+b100000000010010010011 !
+b100000000010010010011 (
+1&
+11

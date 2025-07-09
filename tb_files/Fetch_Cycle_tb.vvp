@@ -1,0 +1,162 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 9;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0127A178 .scope module, "tb" "tb" 2 4;
+ .timescale -9 -9;
+v012DD060_0 .net "InstrD", 31 0, v012B0498_0; 1 drivers
+v012DCEA8_0 .net "PCD", 31 0, v012B05A0_0; 1 drivers
+v012DD168_0 .net "PCPlus4D", 31 0, v012DD3D0_0; 1 drivers
+v012DD5E0_0 .var "PCSrcE", 0 0;
+v012DD1C0_0 .var "PCTargetE", 31 0;
+v012DD110_0 .var "clk", 0 0;
+v012DCF00_0 .var "rst", 0 0;
+S_01279B18 .scope module, "dut" "fetch_cycle" 2 12, 3 6, S_0127A178;
+ .timescale 0 0;
+v012B0700_0 .alias "InstrD", 31 0, v012DD060_0;
+v012B0440_0 .net "InstrF", 31 0, L_012DD428; 1 drivers
+v012B0498_0 .var "InstrF_reg", 31 0;
+v012B0548_0 .alias "PCD", 31 0, v012DCEA8_0;
+v012B0078_0 .net "PCF", 31 0, v012B03E8_0; 1 drivers
+v012B05A0_0 .var "PCF_reg", 31 0;
+v012B05F8_0 .alias "PCPlus4D", 31 0, v012DD168_0;
+v012B0650_0 .net "PCPlus4F", 31 0, L_012DCF58; 1 drivers
+v012DD3D0_0 .var "PCPlus4F_reg", 31 0;
+v012DD008_0 .net "PCSrcE", 0 0, v012DD5E0_0; 1 drivers
+v012DD2C8_0 .net "PCTargetE", 31 0, v012DD1C0_0; 1 drivers
+v012DD638_0 .net "PC_F", 31 0, L_012DCCF0; 1 drivers
+v012DD530_0 .net "clk", 0 0, v012DD110_0; 1 drivers
+v012DCC98_0 .net "rst", 0 0, v012DCF00_0; 1 drivers
+E_012A1D60/0 .event negedge, v012B02E0_0;
+E_012A1D60/1 .event posedge, v012B0230_0;
+E_012A1D60 .event/or E_012A1D60/0, E_012A1D60/1;
+S_0127A5B8 .scope module, "PC_MUX" "mux" 3 25, 4 1, S_01279B18;
+ .timescale 0 0;
+L_012B0908 .functor NOT 1, v012DD5E0_0, C4<0>, C4<0>, C4<0>;
+v012B0390_0 .net *"_s0", 0 0, L_012B0908; 1 drivers
+v012B0180_0 .alias "a", 31 0, v012B0650_0;
+v012B04F0_0 .alias "b", 31 0, v012DD2C8_0;
+v012B0758_0 .alias "c", 31 0, v012DD638_0;
+v012B0020_0 .alias "s", 0 0, v012DD008_0;
+L_012DCCF0 .functor MUXZ 32, v012DD1C0_0, L_012DCF58, L_012B0908, C4<>;
+S_0127A288 .scope module, "Program_Counter" "PC_module" 3 28, 5 1, S_01279B18;
+ .timescale 0 0;
+v012B03E8_0 .var "PC", 31 0;
+v012B06A8_0 .alias "PC_Next", 31 0, v012DD638_0;
+v012B0230_0 .alias "clk", 0 0, v012DD530_0;
+v012B0338_0 .alias "rst", 0 0, v012DCC98_0;
+E_012A1D80 .event posedge, v012B0230_0;
+S_0127A200 .scope module, "IMEM" "Instruction_Memory" 3 31, 6 1, S_01279B18;
+ .timescale 0 0;
+L_012B0940 .functor XNOR 1, v012DCF00_0, C4<0>, C4<0>, C4<0>;
+v0127C628_0 .alias "A", 31 0, v012B0078_0;
+v0127C680_0 .alias "RD", 31 0, v012B0440_0;
+v0127C6D8_0 .net *"_s0", 0 0, C4<0>; 1 drivers
+v01274568_0 .net *"_s2", 0 0, L_012B0940; 1 drivers
+v012B00D0_0 .net *"_s4", 31 0, C4<00000000000000000000000000000000>; 1 drivers
+v012B01D8_0 .net *"_s6", 31 0, L_012DCDA0; 1 drivers
+v012B0288_0 .net *"_s9", 29 0, L_012DD270; 1 drivers
+v012B0128 .array "mem", 0 1023, 31 0;
+v012B02E0_0 .alias "rst", 0 0, v012DCC98_0;
+L_012DCDA0 .array/port v012B0128, L_012DD270;
+L_012DD270 .part v012B03E8_0, 2, 30;
+L_012DD428 .functor MUXZ 32, L_012DCDA0, C4<00000000000000000000000000000000>, L_012B0940, C4<>;
+S_01279870 .scope module, "PC_adder" "PC_Adder" 3 34, 7 1, S_01279B18;
+ .timescale 0 0;
+v012A4D60_0 .alias "a", 31 0, v012B0078_0;
+v012A4DB8_0 .net "b", 31 0, C4<00000000000000000000000000000100>; 1 drivers
+v012A4E10_0 .alias "c", 31 0, v012B0650_0;
+L_012DCF58 .arith/sum 32, v012B03E8_0, C4<00000000000000000000000000000100>;
+    .scope S_0127A288;
+T_0 ;
+    %wait E_012A1D80;
+    %load/v 8, v012B0338_0, 1;
+    %inv 8, 1;
+    %jmp/0xz  T_0.0, 8;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012B03E8_0, 0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/v 8, v012B06A8_0, 32;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012B03E8_0, 0, 8;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0127A200;
+T_1 ;
+    %vpi_call 6 10 "$readmemh", "memfile.hex", v012B0128;
+    %end;
+    .thread T_1;
+    .scope S_01279B18;
+T_2 ;
+    %wait E_012A1D60;
+    %load/v 8, v012DCC98_0, 1;
+    %cmpi/u 8, 0, 1;
+    %jmp/0xz  T_2.0, 4;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012B0498_0, 0, 0;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012B05A0_0, 0, 0;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012DD3D0_0, 0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/v 8, v012B0440_0, 32;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012B0498_0, 0, 8;
+    %load/v 8, v012B0078_0, 32;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012B05A0_0, 0, 8;
+    %load/v 8, v012B0650_0, 32;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012DD3D0_0, 0, 8;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0127A178;
+T_3 ;
+    %set/v v012DD110_0, 0, 1;
+    %end;
+    .thread T_3;
+    .scope S_0127A178;
+T_4 ;
+    %load/v 8, v012DD110_0, 1;
+    %inv 8, 1;
+    %set/v v012DD110_0, 8, 1;
+    %delay 50, 0;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_0127A178;
+T_5 ;
+    %ix/load 0, 1, 0;
+    %assign/v0 v012DCF00_0, 0, 0;
+    %delay 200, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v012DCF00_0, 0, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v012DD5E0_0, 0, 0;
+    %ix/load 0, 32, 0;
+    %assign/v0 v012DD1C0_0, 0, 0;
+    %delay 500, 0;
+    %vpi_call 2 34 "$finish";
+    %end;
+    .thread T_5;
+    .scope S_0127A178;
+T_6 ;
+    %vpi_call 2 39 "$dumpfile", "dumpf.vcd";
+    %vpi_call 2 40 "$dumpvars", 1'sb0, S_0127A178;
+    %end;
+    .thread T_6;
+# The file index is used to find the file name in the following table.
+:file_names 8;
+    "N/A";
+    "<interactive>";
+    "Fetch_Cycle_tb.v";
+    "./Fetch_Cycle.v";
+    "./mux.v";
+    "./PC.v";
+    "./Instruction_Memory.v";
+    "./PC_Adder.v";

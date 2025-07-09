@@ -1,0 +1,113 @@
+[*]
+[*] GTKWave Analyzer v3.3.48 (w)1999-2013 BSI
+[*] Wed Jul 09 09:05:55 2025
+[*]
+[dumpfile] "D:\Verilog_Projects\RISC-V Pipeline Core Project\dump.vcd"
+[dumpfile_mtime] "Wed Jul 09 08:54:29 2025"
+[dumpfile_size] 21143
+[savefile] "D:\Verilog_Projects\RISC-V Pipeline Core Project\pipeline"
+[timestart] 2
+[size] 1920 1057
+[pos] -1 -1
+*-7.440291 655 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tbp.
+[treeopen] tbp.dut.
+[sst_width] 211
+[signals_width] 274
+[sst_expanded] 1
+[sst_vpaned_height] 315
+@800200
+-Global_Inputs
+@28
+tbp.clk
+tbp.rst
+@1000200
+-Global_Inputs
+@800200
+-Fetch_Cycle
+@28
+tbp.dut.PCSrcE
+@22
+tbp.dut.PCTargetE[31:0]
+tbp.dut.PCD[31:0]
+tbp.dut.InstrD[31:0]
+tbp.dut.PCPlus4D[31:0]
+@1000200
+-Fetch_Cycle
+@800200
+-Decode_Cycle
+@22
+tbp.dut.PCE[31:0]
+tbp.dut.PCPlus4E[31:0]
+tbp.dut.RD_E[4:0]
+@28
+tbp.dut.ALUControlE[2:0]
+tbp.dut.ALUSrcE
+tbp.dut.BranchE
+tbp.dut.MemWriteE
+tbp.dut.RegWriteE
+tbp.dut.ResultSrcE
+tbp.dut.Execute.ForwardA_E[1:0]
+@22
+tbp.dut.Execute.Src_A[31:0]
+@28
+tbp.dut.Execute.ForwardB_E[1:0]
+@22
+tbp.dut.Execute.Src_B[31:0]
+tbp.dut.RD1_E[31:0]
+tbp.dut.RD2_E[31:0]
+tbp.dut.Imm_Ext_E[31:0]
+@1000200
+-Decode_Cycle
+@800200
+-Execute_Cycle
+@22
+tbp.dut.PCPlus4M[31:0]
+tbp.dut.RD_M[4:0]
+@28
+tbp.dut.MemWriteM
+tbp.dut.RegWriteM
+tbp.dut.ResultSrcM
+@22
+tbp.dut.ALUResultM[31:0]
+tbp.dut.WriteDataM[31:0]
+@1000200
+-Execute_Cycle
+@800200
+-Memory_Cycle
+@22
+tbp.dut.PCPlus4W[31:0]
+@28
+tbp.dut.ResultSrcW
+@22
+tbp.dut.ALUResultW[31:0]
+tbp.dut.ReadDataW[31:0]
+@1000200
+-Memory_Cycle
+@800200
+-Register_Writeback
+@28
+tbp.dut.RegWriteW
+@22
+tbp.dut.RDW[4:0]
+tbp.dut.ResultW[31:0]
+@1000200
+-Register_Writeback
+@800200
+-Forwarding_logic
+@28
+tbp.dut.forwarding_block.RegWriteM
+tbp.dut.forwarding_block.RegWriteW
+@22
+tbp.dut.forwarding_block.RD_M[4:0]
+tbp.dut.forwarding_block.RD_W[4:0]
+tbp.dut.forwarding_block.RS1_E[4:0]
+tbp.dut.forwarding_block.RS2_E[4:0]
+@28
+tbp.dut.forwarding_block.ForwardAE[1:0]
+@29
+tbp.dut.forwarding_block.ForwardBE[1:0]
+@1000200
+-Forwarding_logic
+[pattern_trace] 1
+[pattern_trace] 0
