@@ -14,7 +14,6 @@ A 5-stage pipelined RISC-V processor implemented in Verilog, supporting basic in
 - Hazard detection and forwarding
 - Simple and modular Verilog design
 
-This project builds upon an open-source RISC-V core by MERL-DSU (Apache 2.0 Licensed), with substantial modifications.
 
 ## **Author**
 
